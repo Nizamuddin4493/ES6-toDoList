@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      template: './src/index.html',
     }),
   ],
   output: {
@@ -27,7 +27,16 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '/images/',
+              publicPath: '/images/',
+            },
+          },
+        ],
       },
     ],
   },
