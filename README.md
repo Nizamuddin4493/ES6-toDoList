@@ -13,10 +13,20 @@ Additional description: This project is only built with Html and CSS.
 - JavaScript
 - WebPack
 - ES6 Modules
+- Babel
 
 ## Getting Started
 
 This is The Project of To Do List / Daily Tasks build in JavaScript with using the webpack Plugins. In this site a user can write his/her daily task, delete one or more tasks at a time, and can refrash all the task from To Do list.
+
+## Run the Project Locally
+- To Clone the Project Locally Please click the following link.
+- [ES6-toDoList](https://github.com/Nizamuddin4493/ES6-toDoList)
+- Then click on Green Code button
+- Copy the SSH link and clone it Locally through your Code Editor's terminal.
+- To run the project in you browser, Please run the " npm install " command in the code editer terminal.
+- Then run the " npm start " to run the project in your brower.
+- Remember you must have installed node.js in your system.
 
 👤 Nizamuddin Ahmadzai
 
@@ -40,4 +50,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is MIT licensed.
+This project is ISC licensed.

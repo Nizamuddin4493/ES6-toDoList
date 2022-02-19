@@ -2,6 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 
+/* eslint-disable no-const-assign */
 const form = document.querySelector('#form');
 const inputF = document.querySelector('.inputF');
 const parentNode = document.querySelector('.parent-node');
@@ -10,7 +11,6 @@ const edit = document.querySelector('.edit');
 const enterBtn = document.querySelector('.btn');
 const removeAll = document.querySelector('.removeAll');
 
-// The Item Array is defines here
 // eslint-disable-next-line import/no-mutable-exports
 let itemsArr = [];
 
@@ -30,6 +30,7 @@ const updateItem = function (currentItemIndex, value) {
   saveLocalStorage(itemsArr);
 };
 
+// eslint-disable-next-line func-names
 const handleItem = function (itemData) {
   const items = document.querySelectorAll('.show-list');
   items.forEach((item) => {
@@ -52,6 +53,7 @@ const handleItem = function (itemData) {
           item.querySelector('.drag-drop').style.display = 'none';
           item.querySelector('.trash').style.display = 'flex';
         }
+        // eslint-disable-next-line consistent-return
         removeAll.addEventListener('click', (e) => {
           e.preventDefault();
           // eslint-disable-next-line eqeqeq
@@ -134,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Reload the Page
 function reload() {
-  // eslint-disable-next-line no-func-assign
+// eslint-disable-next-line no-func-assign
   reload = location.reload();
 }
 // Event listeners for reload.

@@ -1,5 +1,5 @@
-/* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-restricted-globals */
 import _ from 'lodash';
 import {
   itemsArr, tasksListShow, getItems, saveLocalStorage,
