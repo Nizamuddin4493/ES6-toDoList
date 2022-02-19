@@ -16,7 +16,6 @@ const updateItem = function (currentItemIndex, value) {
   const newItem = itemsArr[currentItemIndex];
   newItem.description = value;
   itemsArr.splice(currentItemIndex, 1, newItem);
-  // eslint-disable-next-line no-use-before-define
   saveLocalStorage(itemsArr);
 };
 
