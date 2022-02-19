@@ -8,6 +8,7 @@ import unCheck from './images/unCheck.png';
 import checked from './images/checked.png';
 import trash from './images/trash.png';
 import {
+  // eslint-disable-next-line import/named
   itemsArr, tasksListShow, getItems, saveLocalStorage,
 } from './activeList.js';
 import {

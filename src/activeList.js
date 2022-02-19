@@ -1,10 +1,7 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/no-mutable-exports */
-/* eslint-disable no-use-before-define */
 /* eslint-disable no-restricted-globals */
+// eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 
-/* eslint-disable no-const-assign */
 const form = document.querySelector('#form');
 const inputF = document.querySelector('.inputF');
 const parentNode = document.querySelector('.parent-node');
@@ -13,6 +10,8 @@ const edit = document.querySelector('.edit');
 const enterBtn = document.querySelector('.btn');
 const removeAll = document.querySelector('.removeAll');
 
+// The Item Array is defines here
+// eslint-disable-next-line import/no-mutable-exports
 let itemsArr = [];
 
 const removeItem = function (item) {
@@ -20,15 +19,17 @@ const removeItem = function (item) {
   itemsArr.splice(removeIndex, 1);
 };
 
+const saveLocalStorage = (itemsArr) => {
+  localStorage.setItem('itemsArr', JSON.stringify(itemsArr));
+};
+
 const updateItem = function (currentItemIndex, value) {
   const newItem = itemsArr[currentItemIndex];
   newItem.description = value;
   itemsArr.splice(currentItemIndex, 1, newItem);
-  // eslint-disable-next-line no-use-before-define
   saveLocalStorage(itemsArr);
 };
 
-// eslint-disable-next-line func-names
 const handleItem = function (itemData) {
   const items = document.querySelectorAll('.show-list');
   items.forEach((item) => {
@@ -51,7 +52,6 @@ const handleItem = function (itemData) {
           item.querySelector('.drag-drop').style.display = 'none';
           item.querySelector('.trash').style.display = 'flex';
         }
-        // eslint-disable-next-line consistent-return
         removeAll.addEventListener('click', (e) => {
           e.preventDefault();
           // eslint-disable-next-line eqeqeq
@@ -107,10 +107,6 @@ const getItems = () => {
   tasksListShow(itemsArr);
 };
 
-const saveLocalStorage = (itemsArr) => {
-  localStorage.setItem('itemsArr', JSON.stringify(itemsArr));
-};
-
 document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -138,13 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Reload the Page
 function reload() {
-// eslint-disable-next-line no-func-assign
+  // eslint-disable-next-line no-func-assign
   reload = location.reload();
 }
 // Event listeners for reload.
 enterBtn.addEventListener('click', reload, false);
-
-/* eslint-disable import/prefer-default-export */
 
 export {
   itemsArr, tasksListShow, getItems, saveLocalStorage, enterBtn,

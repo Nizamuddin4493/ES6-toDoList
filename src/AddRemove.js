@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-restricted-globals */
+/* eslint-disable no-unused-vars */
 import _ from 'lodash';
 import {
   itemsArr, tasksListShow, getItems, saveLocalStorage,
@@ -16,6 +16,7 @@ const updateItem = function (currentItemIndex, value) {
   const newItem = itemsArr[currentItemIndex];
   newItem.description = value;
   itemsArr.splice(currentItemIndex, 1, newItem);
+  // eslint-disable-next-line no-use-before-define
   saveLocalStorage(itemsArr);
 };
 
@@ -27,7 +28,6 @@ function reload() {
 // Event listeners for reload.
 removeAll.addEventListener('click', reload, false);
 
-// eslint-disable-next-line import/prefer-default-export
 export {
   reload, removeAll, removeItem, updateItem,
 };
