@@ -135,17 +135,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   getItems();
 });
-
-// Reload the Page
-function reload() {
-// eslint-disable-next-line no-func-assign
-  reload = location.reload();
-}
-// Event listeners for reload.
-enterBtn.addEventListener('click', reload, false);
-
-/* eslint-disable import/prefer-default-export */
-
-export {
-  itemsArr, tasksListShow, getItems, saveLocalStorage, enterBtn,
-};
