@@ -31,13 +31,13 @@ hr {
   margin: 0;
 }
 
-.form {
+#form {
   display: flex;
   justify-content: space-between;
 }
 
 .inputF {
-  width: 92%;
+  width: 100%;
   height: 40px;
   border: none;
   font-size: 18px;
@@ -73,6 +73,16 @@ hr {
   cursor: pointer;
   width: 16px;
   height: 16px;
+  margin-left: 10px;
+}
+
+.checked {
+  display: none;
+  border: 1px solid #eee;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
 }
 
 .tast {
@@ -81,6 +91,7 @@ hr {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 0 10px;
   padding: 10px 0 10px 0;
+  width: 100%;
 }
 
 .drag-drop {
@@ -105,4 +116,35 @@ hr {
   font-size: 16px;
   color: #888;
   background-color: rgb(243, 243, 243);
+}
+
+.btn {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.enter-err {
+  margin-left: 15px;
+  color: red;
+  font-family: Arial, serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: width 12s;
+}
+
+.edit {
+  margin-left: 1px;
+  color: green;
+  font-family: Arial, serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: width 12s;
+}
+
+.trash {
+  display: none;
+  margin: 0 10px 0 auto;
+  padding: 0 5px;
+  cursor: pointer;
 }
