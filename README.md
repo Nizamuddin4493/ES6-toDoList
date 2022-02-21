@@ -4,7 +4,10 @@
 
 ![screenshot](src/images/Todo-List-img.png)
 
-Additional description: This project is only built with Html and CSS.
+Additional description: This project is only built with Html and CSS  and JavaScript.
+
+## Live Link to this site.
+[ES6-Todo List](https://nizamuddin4493.github.io/toDoList/dist/index.html).
 
 ## Built With
 
